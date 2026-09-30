@@ -14,6 +14,21 @@ The package provides:
 
 ---
 
+## Prerequisites
+
+- **ROS 2 Humble** (tested on Humble; other distros likely work but are not
+  supported).
+- **`rmw_cyclonedds_cpp` must be the active RMW implementation.**
+  The LTR endpoints speak CycloneDDS on the wire. Running `LtrNode`
+  under `rmw_fastrtps_cpp` (or any other RMW) will not match the
+  endpoints. See [Enabling CycloneDDS](#enabling-cyclonedds) below.
+- CycloneDDS and CycloneDDS-C++ installed:
+
+  ```bash
+  sudo apt install ros-humble-rmw-cyclonedds-cpp
+
+---
+
 ## Contents
 
 - [Quick start](#quick-start)

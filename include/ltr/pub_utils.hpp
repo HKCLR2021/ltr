@@ -4,7 +4,8 @@
 #include <memory>
 #include <rclcpp/rclcpp.hpp>
 
-namespace ltr {
+namespace ltr 
+{
 
 template <typename MsgT>
 inline std::size_t get_subscription_count(
