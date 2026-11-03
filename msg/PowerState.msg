@@ -1,0 +1,2 @@
+float32 input_voltage
+float32 output_current

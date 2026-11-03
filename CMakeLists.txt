@@ -20,9 +20,11 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 # ---- messages ----
 set(msg_files
+  msg/PowerState.msg
   msg/SportModeCmd.msg
   msg/VelCmd.msg
 )
@@ -51,6 +53,7 @@ rosidl_get_typesupport_target(cpp_typesupport_target
 target_link_libraries(ltr_node
   PUBLIC
     rclcpp::rclcpp
+    sensor_msgs::sensor_msgs
     ${cpp_typesupport_target}
 )
 
